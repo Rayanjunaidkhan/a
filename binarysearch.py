@@ -10,16 +10,22 @@ nums=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
 
 # taKE INPUT FOR number
-key = int(input("what nuumber do you want to search for"))
+key = int(input("what nuumber do you want to search for: "))
 # go to array midddle
-array_middle = len(nums) / 2
+LB = 0
+UB =len(nums) - 1
+array_middle = (UB + LB) / 2
+round(array_middle)
 # if middle value > input take 1/4 value
 count = 0
 while(nums[round(array_middle)] != key ):
-    if nums[round(array_middle)]>key:
-        array_middle = array_middle / 2
-    elif nums[round(array_middle)]< key:
-        array_middle = array_middle * 2
-    elif nums[round(array_middle)] == key:
-        print("index is ",array_middle)
+    array_middle = (UB + LB) / 2
+    if round(nums[array_middle]) > key:
+        UB = array_middle - 1
+    elif round(nums[array_middle]) < key:
+        LB = array_middle + 1
+    else :
+        print(array_middle)
         break
+
+
