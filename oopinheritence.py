@@ -41,7 +41,3 @@ class vehicle:
                 return self.__verticleposition
             def increasespeed(self):
                 self.__currentspeed = self.__currentspeed + self.__IncreaseAmount
-helicopter = vehicle()
-helicopter.__ID = "parrot"
-helicopter.__currentspeed = 80
-print(helicopter)
