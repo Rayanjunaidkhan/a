@@ -5,5 +5,4 @@ def numberswapper(num1,num2):
     num2 = num3
     print(num1,num2)
 
-
 numberswapper(30 , 50)

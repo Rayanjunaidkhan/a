@@ -7,10 +7,9 @@ for i in range(7):
     for j in range(wee):
         readings[i][j] = int(input(f"Give {days[i]} reading {j+1}:  "))
         
-        while readings[i][j] > 50:
+        while readings[i][j] > 50 or readings[i][j] < -20:
             readings[i][j] = int(input(f"Invalid input. give day: {days[i]} reading: {j+1} again "))
-        while readings[i][j] < -20:
-            readings[i][j] = int(input(f"Invalid input. give day: {days[i]} reading: {j+1} again "))
+        
         
 
 for c in range (7):
