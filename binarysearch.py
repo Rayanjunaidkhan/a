@@ -7,7 +7,9 @@ lowerbound = 0
 mid = 0
 
 while upperbound >= lowerbound:
-    mid = int((upperbound + lowerbound) / 2)
+    # // has same effect as int int((upperbound + lowerbound) / 2)
+    # // is called integer division
+    mid = (upperbound + lowerbound) // 2
     
     if key == nums[mid]:
         found = True
@@ -18,5 +20,5 @@ while upperbound >= lowerbound:
         upperbound = mid - 1
 if found == True:
     print("number found at ",mid + 1)
-elif found == False:
+else:
     print("not found")
